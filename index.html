@@ -372,6 +372,8 @@
     .agenda li{grid-template-columns:64px 1fr;}
   }
 </style>
+<!-- BRYTER iframe-support.js: erforderlich für automatische Höhenanpassung und Scroll-Verhalten des eingebetteten Moduls -->
+<script src="https://app.bryter.io/static/js/iframe-support.js"></script>
 </head>
 <body>
 
@@ -556,9 +558,14 @@
       <div data-max-phase-target="rsvp-open">
         <div class="rsvp-frame-wrap">
           <iframe
-            src="https://mechtech.bryter.io/s/AH9BbQcyRAehiEJ7lNNXXw/std"
+            id="bryter-module-1"
+            class="bryter-module"
+            data-src="https://mechtech.bryter.io/s/AH9BbQcyRAehiEJ7lNNXXw/std"
             title="RSVP-Formular"
-            loading="lazy">
+            width="100%"
+            height="0"
+            scrolling="no"
+            frameborder="0">
           </iframe>
         </div>
         <p class="rsvp-note">Bitte füllt das Formular bis zum genannten Termin aus.</p>
